@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Account
+{% endblock %}
+{% block jumbotext %} <h1>Create an Account</h1> {% endblock %}
+
+{% block body %}
+<form class="site-form" action="/accounts/createaccount/" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <button class="btn btn-primary"> Create Account </button>
+  
+</form>
+
+{% endblock %}

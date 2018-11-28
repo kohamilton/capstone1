@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block title %} Storm Water Permit Application {% endblock %}
+
+{% block jumbotext %} <h1>Stormwater Site Development Permit Applicaton</h1> <p>All Fields Are Required For Applicaiton Submittal, Incomplete Applications Will Not Be Processed.</p>
+{% endblock %}
+
+{% block body %}
+
+    <form action="/accounts/userlogin" method="POST">
+    	<div class="form-group">
+    		<label for="projname"> Project Name: </label>
+    		<input type="text" class="form-control" name="projname"><br>
+
+    		<label for="app_date"> Date of Application: </label>
+    		<input type="Date" class="form-control" name="app_date"><br>
+
+    		<label for="projectlocation"> Project Location: </label>
+    		<input type="text" class="form-control" name="projectlocation"><br>
+
+    		<label for="owner_fname"> Owner/Developer First Name: </label>
+    		<input type="text" class="form-control" name="owner_fname"><br>
+
+            <label for="owner_lname"> Owner/Developer Last Name: </label>
+            <input type="text" class="form-control" name="owner_lname"><br>
+
+    		<label for="owner_address"> Owner/Developer Address: </label>
+    		<input type="text" class="form-control" name="owner_address"><br>
+
+    		<label for="phonenumber"> Phone: </label>
+    		<input type="text" class="form-control" name="phonenumber"><br>
+
+    		<label for="tceq_noi"> TCEQ NOI Number: </label>
+    		<input type="text" class="form-control" name="tceq_noi">
+
+    		<label for="contact_fname"> Site Manager First Name: </label>
+    		<input type="text" class="form-control" name="site_contact_fname"><br>
+
+            <label for="contact_lname"> Site Manager Last Name: </label>
+            <input type="text" class="form-control" name="site_contact_lname"><br>
+
+    		<label for="contactphone"> Site Manager Phone: </label>
+    		<input type="text" class="form-control" name="site_contactphone"><br>
+
+    		<label for="contactemail"> Site Manager Email: </label>
+    		<input type="email" class="form-control" name="site_contactemail"><br>
+
+            <label for="inspect_fname"> Inspector First Name: </label>
+            <input type="text" class="form-control" name="inspect_fname"><br>
+
+            <label for="inspect_lname"> Inspector Last Name: </label>
+            <input type="text" class="form-control" name="inspect_lname"><br>
+
+            <label for="inspect_phone"> Inspector Phone: </label>
+            <input type="text" class="form-control" name="inspect_phone"><br>
+
+    		<label for="inspectcontact"> Inspector Email: </label>
+			<input type="email" class="form-control" name="inspect_email"><br>
+
+    		<label for="startdate"> Work Start Date: </label>
+    		<input type="Date" class="form-control" name="startdate"><br>
+
+    		<label for="plat"> Plat number: </label>
+    		<input type="text" class="form-control" name="plat_id"><br>
+
+    		<label for="lot"> Lot: </label>
+    		<input type="text" class="form-control" name="lot_id"><br>
+
+    		<label for="block"> Block: </label>
+    		<input type="text" class="form-control" name="block_id">
+        </div>
+    	<div class="container">
+			<label class="custom-file">Upload Files<input type="file" id="file" class="custom-file-input">
+				<span class="custom-file-control"></span>
+			</label>
+		</div>
+   		<div class="form-group">
+             <button class="btn btn-primary"> Submit Application </button>
+        </div>
+    </form>
+
+{% endblock %}

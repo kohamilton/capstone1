@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome!
+{% endblock %}
+{% block jumbotext %} <h1>Create an Account</h1> {% endblock %}
+
+{% block body %}
+<form class="site-form" action="{% url 'accounts:login' %}" method="POST">
+  {% csrf_token %}
+  {{ form }}
+  <div class="form-group">
+    <button class="btn btn-primary"> Login </button>
+  </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,209 @@
+{% extends "layout.html" %}
+
+{% block title %} Application For Permit For Authorization To Construct An On-Site Sewage Facility And License To Operate {% endblock %}
+
+{% block jumbotext %} <h1>Application For Permit For Authorization To Construct An On-Site Sewage Facility And License To Operate</h1> <p>All Fields Are Required For Applicaiton Submittal, Incomplete Applications Will Not Be Processed.</p>
+{% endblock %}
+
+{% block body %}
+{% csrf_token %}
+<form action="#" method="POST">
+    	<div class="form-group">
+    		<label for="app_date"> Date of Application: </label>
+    		<input type="Date" class="form-control" name="app_date"><br>
+
+    		<label for="owner_fname"> Owner First Name: </label>
+    		<input type="text" class="form-control" name="owner_fname"><br>
+
+    		<label for="owner_lname"> Owner Last Name: </label>
+    		<input type="text" class="form-control" name="owner_lname"><br>
+
+    		<label for="owner_addr"> House Number and Street: </label>
+    		<input type="text" class="form-control" name="owner_addr"><br>
+
+    		<label for="owner_city"> City: </label>
+    		<input type="text" class="form-control" name="owner_city"><br>
+
+    		<label for="owner_state"> State: </label>
+    		<input type="text" class="form-control" name="owner_state"><br>
+
+    		<label for="owner_zipcode"> Zip Code: </label>
+    		<input type="text" class="form-control" name="owner_zipcode"><br>
+
+    		<label for="owner_phone"> Owner Phone: </label>
+    		<input type="text" class="form-control" name="owner_phone"><br>
+
+    		<label for="owner_email"> Owner Email: </label>
+    		<input type="text" class="form-control" name="owner_email"><br>
+
+    		<label for="agent_fname"> Agent First Name: </label>
+    		<input type="text" class="form-control" name="agent_fname"><br>
+
+    		<label for="agent_lname"> Agent Last Name: </label>
+    		<input type="text" class="form-control" name="agent_lname"><br>
+
+    		<label for="agent_addr"> House Number and Street: </label>
+    		<input type="text" class="form-control" name="agent_addr"><br>
+
+    		<label for="agent_city"> City: </label>
+    		<input type="text" class="form-control" name="agent_city"><br>
+
+    		<label for="agent_state"> State: </label>
+    		<input type="text" class="form-control" name="agent_state"><br>
+
+    		<label for="agent_zipcode"> Zip Code: </label>
+    		<input type="text" class="form-control" name="agent_zipcode"><br>
+
+    		<label for="agent_phone"> Agent Phone: </label>
+    		<input type="text" class="form-control" name="agent_phone"><br>
+
+    		<label for="agent_email"> Agent Email: </label>
+    		<input type="text" class="form-control" name="agent_email"><br>
+
+    		<label for="subdivision_name"> Subdivision Name: </label>
+    		<input type="text" class="form-control" name="subdivision_name"><br>
+
+    		<label for="plat"> Plat number: </label>
+    		<input type="text" class="form-control" name="plat_id"><br>
+
+    		<label for="lot"> Lot: </label>
+    		<input type="text" class="form-control" name="lot_id"><br>
+
+    		<label for="block"> Block: </label>
+    		<input type="text" class="form-control" name="block_id"><br>
+
+    		<label for="acre"> Acreage: </label>
+    		<input type="text" class="form-control" name="acre"><br>
+
+    		<label for="legal_desc"> Legal Description of Property: </label>
+    		<input type="text" class="form-control" name="legal_desc"><br>
+
+    		<label for="prop_addr"> Property Number and Street: </label>
+    		<input type="text" class="form-control" name="prop_addr"><br>
+
+    		<label for="prop_city"> City: </label>
+    		<input type="text" class="form-control" name="prop_city"><br>
+
+    		<label for="prop_zip"> Zip: </label>
+    		<input type="text" class="form-control" name="prop_zip"><br>
+
+    		<label for="startdate"> Work Start Date: </label>
+    		<input type="Date" class="form-control" name="startdate"><br>
+
+    		<form action="#" method="POST"> All coorespondence should be sent to: (Check all that apply)
+  					<input type="checkbox" name="owner_email"> Owner
+  					<input type="checkbox" name="agent_email"> Agent
+			</form><br>
+
+			<label for="developmnet"> Type of Development: </label><br><br>
+    		<input type="checkbox" id="developmnet" name="single_type"> Single Family Residential<br>
+
+    		<label>Type of Construction:</label>
+    		<input type="text" class="form-control" name="single_facility"><br>
+
+    		<label>Number of Bedrooms</label>
+    		<input type="text" class="form-control" name="bedrooms"><br>
+
+    		<label>Square footage of structure</label>
+    		<input type="text" class="form-control" name="sq_ft"><br>
+
+    		<input type="checkbox" id="developmnet" name="commercial"> Commercial Facility<br>
+
+    		<label>Type of Facility</label>
+    		<input type="text" class="form-control" name="comm_facility"><br>
+
+    		<label>Number of Facility Occupants</label>
+    		<input type="text" class="form-control" name="facility_occp"><br>
+
+    		<label>Service Establishments Number of Seats for Non-Occupants</label>
+    		<input type="text" class="form-control" name="facility_seats"><br>
+
+    		<label>Hospitality or Heath Facility Establishments Number of Beds</label>
+    		<input type="text" class="form-control" name="facility_beds"><br>
+
+    		<label>Estimated Cost of Structure ($):</label>
+    		<input type="text" class="form-control" name="bldg_costs"><br>
+
+    		<label>Is any portion of proposed OSSF in Army Corp of Engineers Flowage Easement or FEMA Floodplain?</label>
+    		<input type="checkbox" name="FEMA_yes"> Yes
+  			<input type="checkbox" name="FEMA_no"> No
+
+  			<h4>If Yes to above owner must provide all approval letters with applicaiton from FEMA and USACE with completed application.</h4><br>
+
+  			<label>Site Evalutaion Completed?</label>
+    		<input type="checkbox" name="SE_yes"> Yes
+    		<input type="checkbox" name="SE_no"> No<br>
+
+  			<label>Site Evaluator Name:</label>
+  			<input type="text" class="form-control" name="site_eval_name"><br>
+
+  			<label>Description of System:</label>
+  			<input type="text" class="form-control" name = "sys_descrip"><br>
+
+  			<h4>Size of System Based on Planning Materials and Soil Evaluation</h4><br>
+
+  			<label>Tank Size in Gallons:</label>
+  			<input type="text" class="form-control" name="tanksize"><br>
+
+  			<label>Application Area Size in SqFt:</label>
+  			<input type="text" class="form-control" name="app_area_size">
+
+  			<label>Gallons per Day: </label>
+  			<input type="text" class="form-control" name="gpd"><br>
+
+  			<div class="container">
+                <h5>Soil Classification</h5>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Class
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li name="1A"><a href="#">1A</a></li>
+                        <li name="1B"><a href="#">1B</a></li>
+                        <li name="2"><a href="#">2</a></li>
+                        <li name="3"><a href="#">3</a></li>
+                        <li name="4"><a href="#">4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+    		<h5>Is the property located over the Edwards Aquifer Recharge?</h5>
+    		<input type="checkbox" name="ed_yes">Yes
+    		<input type="checkbox" name="ed_no">No<br>
+
+    		<h5>Is there an existing TCEQ approved WPAP for the property?</h5>
+    		<input type="checkbox" name="wpap_yes">Yes
+    		<input type="checkbox" name="wpap_no">No<br>
+
+    		<h5>If there is no WPAP and one is required a R.S or P.E. shall be required to certify that the OSSF design complies with WPAP provisions</h5>
+    		<h5>Permits to construct WILL NOT be issued until a proposed WPAP has be provided</h5><br>
+
+    		<h5>Is the property located over the Edwards Contributing Zone?</h5>
+    		<input type="checkbox" name="cz_yes">Yes
+    		<input type="checkbox" name="cz_no">No<br>
+
+    		<h5>Is there an existing TCEQ approved CZP for the property?</h5>
+    		<input type="checkbox" name="czp_yes">Yes
+    		<input type="checkbox" name="czp_no">No<br>
+
+    		<h5>If there is no CZP and one is required a R.S or P.E. shall be required to certify that the OSSF design complies with CZP provisions</h5>
+    		<h5>Permits to construct WILL NOT be issued until a proposed CZP has be provided</h5><br>
+
+    		<h5>Is this property located within an incorporated municipality?</h5>
+    		<input type="checkbox" name="city_yes">Yes
+    		<input type="checkbox" name="city_no">No<br>
+
+    		<h5>If yes indicate the name of the city</h5>
+    		<input type="text" class="form-control" name="city_name">
+
+        </div>
+
+    	<div class="container">
+			<label class="custom-file">Upload Files<input type="file" id="file" class="custom-file-input">
+				<span class="custom-file-control"></span>
+			</label>
+		</div>
+   		<div class="form-group">
+             <button class="btn btn-primary"> Submit Application </button>
+        </div>
+    </form>
+{% endblock %}

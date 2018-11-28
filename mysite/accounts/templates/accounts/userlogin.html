@@ -1,0 +1,24 @@
+
+{% extends "layout.html" %}
+
+{% block title %} User Login Page {% endblock %}
+
+{% block jumbotext%} Welcome {{ headline }} {% endblock%}
+
+{% block body %}
+       <h2>Hello, World! Welcome to the login page--it's currently under construction check back soon!</h2>
+       <div class="app">
+       	{% for apps in app_1 %}
+       		<div class="app">
+       			<h2><a href="#"></a>{{ apps.projname }}</h2>
+       		</div>
+       	{% endfor %}
+       </div>
+       	<div class="app">
+       		{% for apps in app_2%}
+       			<div class="app">
+       				<h2><a href="#"></a>{{ envapps.prop_addr }}</h2>
+       			</div>
+       		{% endfor %}
+       	</div>
+{% endblock %}
